@@ -5,7 +5,8 @@
            [org.apache.kafka.clients.producer MockProducer]
            [org.apache.kafka.common TopicPartition]
            [org.apache.kafka.common.serialization StringSerializer]
-           [java.util ArrayList]))
+           [java.util ArrayList])
+  (:refer-clojure :exclude [flush send]))
 
 (deftest producing
   (let [p (MockProducer. true (StringSerializer.) (StringSerializer.))]

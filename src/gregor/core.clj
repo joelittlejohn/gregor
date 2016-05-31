@@ -5,7 +5,8 @@
             ConsumerRebalanceListener]
            [org.apache.kafka.clients.producer Producer KafkaProducer Callback
             ProducerRecord RecordMetadata])
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str])
+  (:refer-clojure :exclude [flush send]))
 
 
 (def ^:no-doc str-deserializer "org.apache.kafka.common.serialization.StringDeserializer")
